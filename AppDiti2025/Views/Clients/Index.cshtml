@@ -1,0 +1,26 @@
+@model IEnumerable<AppDiti2025.Models.Client>
+@{
+    ViewData["Title"] = "Clients";
+}
+<h1>Clients</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Email</th>
+            <th>Adresse</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>@item.Nom</td>
+            <td>@item.Prenom</td>
+            <td>@item.Email</td>
+            <td>@item.Adresse</td>
+        </tr>
+}
+    </tbody>
+</table>
