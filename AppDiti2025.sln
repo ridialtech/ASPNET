@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppDiti2025", "AppDiti2025\AppDiti2025.csproj", "{2F611617-979B-4D7B-8FE2-2E5CFBC4F84A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F611617-979B-4D7B-8FE2-2E5CFBC4F84A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F611617-979B-4D7B-8FE2-2E5CFBC4F84A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F611617-979B-4D7B-8FE2-2E5CFBC4F84A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F611617-979B-4D7B-8FE2-2E5CFBC4F84A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
