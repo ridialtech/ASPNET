@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using AppDiti2025.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +18,13 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+// Ensure database is created using code-first models
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    db.Database.EnsureCreated();
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -31,6 +39,16 @@ else
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+var niceAdminPath = Path.Combine(app.Environment.ContentRootPath, "NiceAdmin", "assets");
+if (Directory.Exists(niceAdminPath))
+{
+    app.UseStaticFiles(new StaticFileOptions
+    {
+        FileProvider = new PhysicalFileProvider(niceAdminPath),
+        RequestPath = "/niceadmin"
+    });
+}
 
 app.UseRouting();
 
