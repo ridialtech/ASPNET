@@ -123,4 +123,5 @@ public class AdminsController : Controller
     {
         return _context.Admins.Any(e => e.Id == id);
     }
+
 }
