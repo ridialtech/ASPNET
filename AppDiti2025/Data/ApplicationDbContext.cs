@@ -12,6 +12,6 @@ public class ApplicationDbContext : IdentityDbContext
     {
     }
 
-    public DbSet<Admin> Admins { get; set; } = default!;
-    public DbSet<Client> Clients { get; set; } = default!;
+    // Additional entity sets will be added here
+
 }

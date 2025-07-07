@@ -17,7 +17,10 @@
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div>
-        <partial name="_LoginPartial" />
+        <nav class="header-nav ms-auto">
+            <partial name="_LoginPartial" />
+        </nav>
+
     </header>
 
     <aside id="sidebar" class="sidebar">
@@ -28,18 +31,7 @@
                     <span>Dashboard</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" asp-controller="Admins" asp-action="Index">
-                    <i class="bi bi-person-badge"></i>
-                    <span>Admins</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" asp-controller="Clients" asp-action="Index">
-                    <i class="bi bi-people"></i>
-                    <span>Clients</span>
-                </a>
-            </li>
+
         </ul>
     </aside>
 
