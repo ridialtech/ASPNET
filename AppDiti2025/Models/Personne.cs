@@ -19,4 +19,5 @@ public abstract class Personne
     public DateTime DateNaissP { get; set; }
 
     public char SexeP { get; set; }
+
 }

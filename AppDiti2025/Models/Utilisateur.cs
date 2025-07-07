@@ -12,4 +12,5 @@ public abstract class Utilisateur
     public string EmailU { get; set; } = string.Empty;
 
     public string? TelephoneU { get; set; }
+
 }

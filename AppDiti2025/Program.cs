@@ -32,6 +32,7 @@ using (var scope = app.Services.CreateScope())
         var user = new IdentityUser { UserName = adminEmail, Email = adminEmail };
         userManager.CreateAsync(user, adminPassword).Wait();
     }
+
 }
 
 // Configure the HTTP request pipeline.

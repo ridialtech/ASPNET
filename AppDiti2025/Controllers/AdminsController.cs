@@ -8,4 +8,5 @@ public class AdminsController : Controller
     {
         return View();
     }
+
 }
