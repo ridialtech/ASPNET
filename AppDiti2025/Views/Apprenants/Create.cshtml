@@ -1,0 +1,39 @@
+@model AppDiti2025.Models.Apprenant
+@{
+    ViewData["Title"] = "Ajouter un apprenant";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Create">
+    <div class="mb-3">
+        <label asp-for="Matricule" class="form-label"></label>
+        <input asp-for="Matricule" class="form-control" />
+        <span asp-validation-for="Matricule" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="NomP" class="form-label"></label>
+        <input asp-for="NomP" class="form-control" />
+        <span asp-validation-for="NomP" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="PrenomP" class="form-label"></label>
+        <input asp-for="PrenomP" class="form-control" />
+        <span asp-validation-for="PrenomP" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="DateNaissP" class="form-label"></label>
+        <input asp-for="DateNaissP" class="form-control" />
+        <span asp-validation-for="DateNaissP" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ParentId" class="form-label"></label>
+        <select asp-for="ParentId" asp-items="ViewBag.ParentId" class="form-select"></select>
+    </div>
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+    <a asp-action="Index" class="btn btn-secondary">Retour</a>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

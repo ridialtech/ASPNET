@@ -1,0 +1,17 @@
+@model AppDiti2025.Models.Parent
+@{
+    ViewData["Title"] = "Détails";
+}
+
+<h1>Détails</h1>
+<dl class="row">
+    <dt class="col-sm-2">ID</dt>
+    <dd class="col-sm-10">@Model.IdPar</dd>
+    <dt class="col-sm-2">Statut</dt>
+    <dd class="col-sm-10">@Model.Statut</dd>
+</dl>
+
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.IdPar" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Retour</a>
+</p>
