@@ -13,4 +13,5 @@ public class ApplicationDbContext : IdentityDbContext
     }
 
     // Additional entity sets will be added here
+
 }
