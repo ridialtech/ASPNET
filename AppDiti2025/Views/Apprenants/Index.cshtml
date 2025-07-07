@@ -1,0 +1,36 @@
+@model IEnumerable<AppDiti2025.Models.Apprenant>
+@{
+    ViewData["Title"] = "Apprenants";
+}
+
+<h1>Liste des apprenants</h1>
+<p>
+    <a asp-action="Create" class="btn btn-primary">Ajouter</a>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Matricule</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Parent</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Matricule</td>
+            <td>@item.NomP</td>
+            <td>@item.PrenomP</td>
+            <td>@item.ParentId</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdP">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdP">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdP">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

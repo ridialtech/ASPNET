@@ -1,0 +1,24 @@
+@model AppDiti2025.Models.Apprenant
+@{
+    ViewData["Title"] = "Détails";
+}
+
+<h1>Détails</h1>
+
+<div>
+    <h4>Apprenant</h4>
+    <dl class="row">
+        <dt class="col-sm-2">Matricule</dt>
+        <dd class="col-sm-10">@Model.Matricule</dd>
+        <dt class="col-sm-2">Nom</dt>
+        <dd class="col-sm-10">@Model.NomP</dd>
+        <dt class="col-sm-2">Prénom</dt>
+        <dd class="col-sm-10">@Model.PrenomP</dd>
+        <dt class="col-sm-2">Parent</dt>
+        <dd class="col-sm-10">@Model.ParentId</dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdP" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Retour</a>
+</div>

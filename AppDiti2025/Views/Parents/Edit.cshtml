@@ -1,0 +1,21 @@
+@model AppDiti2025.Models.Parent
+@{
+    ViewData["Title"] = "Modifier";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="IdPar" />
+    <div class="mb-3">
+        <label asp-for="Statut" class="form-label"></label>
+        <input asp-for="Statut" class="form-control" />
+        <span asp-validation-for="Statut" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Sauvegarder</button>
+    <a asp-action="Index" class="btn btn-secondary">Retour</a>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
