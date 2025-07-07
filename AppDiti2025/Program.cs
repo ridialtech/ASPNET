@@ -23,6 +23,16 @@ using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     db.Database.EnsureCreated();
+
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+    const string adminEmail = "admin@example.com";
+    const string adminPassword = "Admin123!";
+    if (userManager.FindByEmailAsync(adminEmail).Result == null)
+    {
+        var user = new IdentityUser { UserName = adminEmail, Email = adminEmail };
+        userManager.CreateAsync(user, adminPassword).Wait();
+    }
+
 }
 
 // Configure the HTTP request pipeline.

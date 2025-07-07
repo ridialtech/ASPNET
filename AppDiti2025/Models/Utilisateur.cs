@@ -2,11 +2,15 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AppDiti2025.Models;
 
-public abstract class Utilisateur : Personne
+public abstract class Utilisateur
 {
+    [Key]
+    public string IdentifiantU { get; set; } = Guid.NewGuid().ToString();
+
     [Required]
     [EmailAddress]
-    public string Email { get; set; } = string.Empty;
+    public string EmailU { get; set; } = string.Empty;
 
-    public string? Telephone { get; set; }
+    public string? TelephoneU { get; set; }
+
 }
