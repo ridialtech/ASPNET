@@ -19,3 +19,4 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<Service> Services => Set<Service>();
     public DbSet<Inscription> Inscriptions => Set<Inscription>();
 }
+
